@@ -1,0 +1,13 @@
+FC=gfortran -g
+all:rNC.exe
+%.exe:%.o
+	$(FC) $< -o $@ -L/usr/lib/ -L/usr/lib64/ -lnetcdff -lnetcdf
+
+
+%.o:%.F90
+	$(FC) -ffree-line-length-0 -I/usr/lib64/gfortran/modules -I/usr/include -c $<
+
+.PHONY:clean
+clean:
+	rm -f rNC.o rNC.exe
+
