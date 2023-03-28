@@ -32,3 +32,5 @@ Reference of math:
   > FY4A成像仪标称上行列号和经纬度的互相转换方法.pdf
   
 ## the time tag seems is UTC, not BJ time.
+
+## only conxy2ll.c and rNC.F90 include 2 Makefiles are required, others are reference and for post confirm.
